@@ -1,0 +1,27 @@
+{
+  "width": 1030,
+  "title": "Status Board",
+  "modules": [
+    { "name": "clock",
+      "width": 150,
+      "update": 60
+    },
+    {
+      "name": "countdown",
+      "width": 820,
+      "update": 3600,
+      "args": {
+        "event": "UNTIL T8",
+        "stop": 1274706000
+      }
+    },
+    {
+      "name": "bargraph",
+      "width": 1000,
+      "update": 0,
+      "args": {
+        "height": 300
+      }
+    }
+  ]
+}

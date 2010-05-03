@@ -1,0 +1,74 @@
+body {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 18px;
+	background-color: #0a0a0a;
+	color: #fff;
+}
+
+.module {
+	float: left;
+	text-align: center;
+	background-color: #171919;
+	-webkit-border-radius: 15px;
+	border: 5px solid #171919;
+	margin: 10px;
+	min-height: 50px;
+}
+
+.jumbo {
+	font-size: 28px;
+}
+
+/* COUNTDOWN MODULE */
+.event {
+	color: #9c9b98;
+}
+/* END COUNTDOWN MODULE */
+
+/* GRAPH MODULE */
+.graph {
+	margin-right: auto;
+	margin-left: auto;
+	width: auto;
+}
+
+.bar {
+	position: relative;
+	height: auto;
+	width: 170px;
+	float: left;
+	padding: 0 12px 0 12px;
+}
+
+.bar .view {
+	border-width: 5px;
+	border-style: solid;
+	-webkit-border-radius: 3px;
+}
+
+#graph_1 {
+	background: #FABD15;
+	border-color: #FABD15;
+}
+
+#graph_2 {
+	background: #49C817;
+	border-color: #49C817;
+}
+
+#graph_3 {
+	background: #FD3B15;
+	border-color: #FD3B15;
+}
+
+#graph_4 {
+	background: #7554BF;
+	border-color: #7554BF;
+}
+
+#graph_5 {
+	background: #107CF8;
+	border-color: #107CF8;
+}
+
+/* END GRAPH MODULE */
