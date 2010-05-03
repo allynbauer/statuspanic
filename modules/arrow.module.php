@@ -1,6 +1,6 @@
 <?php
 
-$num = 0.56;
+$num = rand(-99, 99);
 
 
 if ($num > 0) $class = 'uparrow';

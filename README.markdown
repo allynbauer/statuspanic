@@ -1,4 +1,4 @@
-each module has, by default, half the width
+modules are for display wrappers - the data must be provided 
 
 if you provide args in config to a module, that module will get those args via GET
 
