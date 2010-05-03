@@ -1,0 +1,1 @@
+<span class='jumbo'>Created by <a href='http://allynbauer.com'>Allyn Bauer</a><br />DL from <a href='http://github.com/ajb/statuspanic'>GitHub</a></span>

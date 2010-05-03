@@ -1,3 +1,26 @@
+@font-face {
+  font-family: 'Cutouts';
+  src: url('cutouts.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cutouts2';
+  src: url('cutouts2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+	font: normal 40px 'Cutouts';
+	color: #ded00b;
+}
+
+.icon2 {
+  font-family: 'Cutouts2';
+}
+
 body {
 	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 18px;
@@ -18,6 +41,26 @@ body {
 .jumbo {
 	font-size: 28px;
 }
+
+.mega {
+	font-size: 40px;
+}
+
+/* ARROW MODULE */
+.uparrow {
+	font: normal 65px 'Cutouts';
+	color: #15af00;
+	display: block;
+}
+
+.downarrow {
+	font: normal 65px 'Cutouts';
+	color: #e31d18;
+	-webkit-transform: rotate(180deg); 
+	-moz-transform: rotate(180deg);
+	display: block;
+}
+/* END ARROW MODULE */
 
 /* COUNTDOWN MODULE */
 .event {
@@ -49,26 +92,31 @@ body {
 #graph_1 {
 	background: #FABD15;
 	border-color: #FABD15;
+	border-left-color: #d5a110;
 }
 
 #graph_2 {
 	background: #49C817;
 	border-color: #49C817;
+	border-left-color: #38a410;
 }
 
 #graph_3 {
 	background: #FD3B15;
 	border-color: #FD3B15;
+	border-left-color: #cd2e14;
 }
 
 #graph_4 {
 	background: #7554BF;
 	border-color: #7554BF;
+	border-left-color: #6345a5;
 }
 
 #graph_5 {
 	background: #107CF8;
 	border-color: #107CF8;
+	border-left-color: #3368d7;
 }
 
 /* END GRAPH MODULE */

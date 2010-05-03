@@ -7,5 +7,5 @@ $time = date('g:i a');
 ?>
 
 <p class='jumbo' style='line-height: 50px'>
-    <?php echo $time; ?>
+    <em class='icon'>I</em><?php echo $time; ?>
 </p>

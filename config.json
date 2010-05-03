@@ -3,12 +3,12 @@
   "title": "Status Board",
   "modules": [
     { "name": "clock",
-      "width": 150,
+      "width": 200,
       "update": 60
     },
     {
       "name": "countdown",
-      "width": 820,
+      "width": 770,
       "update": 3600,
       "args": {
         "event": "UNTIL T8",
@@ -22,6 +22,16 @@
       "args": {
         "height": 300
       }
+    },
+    {
+      "name": "arrow",
+      "width": 300,
+      "update": 3600
+    },
+    {
+      "name": "meta",
+      "width": 600,
+      "update": 0
     }
   ]
 }
