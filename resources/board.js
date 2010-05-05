@@ -5,6 +5,6 @@ function render_module(name, args) {
 function activate_module(name, seconds, args) {
   render_module(name, args);
   if (seconds > 0) {
-    setInterval("render_module('"+name+"')", (seconds * 1000));
+    setInterval("render_module('"+name+"', '"+args+"')", (seconds * 1000));
   }
 }

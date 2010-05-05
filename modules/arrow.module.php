@@ -1,11 +1,24 @@
 <?php
 
+/* DATA */
 $num = rand(-99, 99);
 
+if (rand(0,4) == 0) {
+    $num = 0;
+}
 
-if ($num > 0) $class = 'uparrow';
-else          $class = 'downarrow';
-
+/* DISPLAY */
+if ($num > 0) {
+    $class = 'uparrow';
+    $code = 'A';
+} elseif ($num < 0) {
+    $class = 'downarrow';
+    $code = 'A';
+} else {
+    $class = 'zero-block';
+    $code = 'K';
+}
 ?>
     
-<span class='<?php echo $class ?>'>A</span><span class='mega'><?php echo $num ?>%</span>
+<span class='<?php echo $class ?>' id='arrow_icon'><?php echo $code ?></span>
+<span class='mega'><?php echo $num ?>%</span>

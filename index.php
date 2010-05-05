@@ -8,6 +8,17 @@ $data = json_decode($data);
 
 if (!$data) die('JSON syntax error in "'.CONFIG.'"');
 
+if ($data->rotate === 'left') {
+    $rotate = '-webkit-transform: rotate(-90deg);';
+}
+elseif ($data->rotate === 'right') {
+    $rotate = '-webkit-transform: rotate(90deg);';
+} else {
+    $rotate = FALSE;
+}
+
+$width = (isset($data->width) ? $data->width . 'px' : '100%');
+
 function render($module) {
     $argstr = "''";
     if (isset($module->args)) {
@@ -34,8 +45,13 @@ function render($module) {
     <script type='text/javascript' src='resources/board.js'></script>
     <style type='text/css'>
         #board {
-            width: <?php echo (isset($data->width) ? $data->width . 'px' : '100%') ?>;
-        }
+        <?php if ($rotate) {
+            echo $rotate;
+            echo "height: $width;";
+        } else {
+            echo "width: $width;";
+        } ?>
+    }
     </style>
 </head>
 <body>

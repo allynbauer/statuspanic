@@ -17,10 +17,6 @@
 	color: #ded00b;
 }
 
-.icon2 {
-  font-family: 'Cutouts2';
-}
-
 body {
 	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: 18px;
@@ -33,9 +29,9 @@ body {
 	text-align: center;
 	background-color: #171919;
 	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
 	border: 5px solid #171919;
 	margin: 10px;
-	min-height: 50px;
 }
 
 .jumbo {
@@ -46,20 +42,37 @@ body {
 	font-size: 40px;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* ARROW MODULE */
-.uparrow {
+
+#arrow_icon {
 	font: normal 65px 'Cutouts';
+	display: block;	
+}
+
+.uparrow {
 	color: #15af00;
-	display: block;
 }
 
 .downarrow {
-	font: normal 65px 'Cutouts';
 	color: #e31d18;
 	-webkit-transform: rotate(180deg); 
 	-moz-transform: rotate(180deg);
-	display: block;
 }
+
+.zero-block {
+	color: #3d69fe;
+}
+
 /* END ARROW MODULE */
 
 /* COUNTDOWN MODULE */
@@ -87,6 +100,7 @@ body {
 	border-width: 5px;
 	border-style: solid;
 	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
 }
 
 #graph_1 {

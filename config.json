@@ -1,6 +1,7 @@
 {
   "width": 1030,
   "title": "Status Board",
+  "rotate": "no",
   "modules": [
     { "name": "clock",
       "width": 200,
@@ -18,7 +19,7 @@
     {
       "name": "bargraph",
       "width": 1000,
-      "update": 0,
+      "update": 15,
       "args": {
         "height": 300
       }
@@ -30,8 +31,13 @@
     },
     {
       "name": "meta",
-      "width": 600,
+      "width": 670,
       "update": 0
+    },
+    {
+      "name": "weather",
+      "width": 400,
+      "update": 3600
     }
   ]
 }
