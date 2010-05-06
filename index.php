@@ -13,6 +13,8 @@ if ($data->rotate === 'left') {
 }
 elseif ($data->rotate === 'right') {
     $rotate = '-webkit-transform: rotate(90deg);';
+} elseif ($data->rotate === 'flip') {
+    $rotate = '-webkit-transform: rotate(180deg);';
 } else {
     $rotate = FALSE;
 }
@@ -28,8 +30,7 @@ function render($module) {
         }
         $argstr = "'" . implode("&", $argstr) . "'";
     }
-    
-    echo "<div class='module' id='$module->name' style='width: {$module->width}px'></div>\n";
+    echo "<div class='module $module->class' id='$module->name' style='width: {$module->width}px'></div>\n";
     echo "\t<script type='text/javascript'>activate_module('$module->name', $module->update, $argstr);</script>\n\n";
 }
 
@@ -55,6 +56,7 @@ function render($module) {
     </style>
 </head>
 <body>
+    <div id='spacer'></div>
     <div id='board'>
         <?php 
         foreach($data->modules as $module)

@@ -12,7 +12,7 @@ An 'update' of 0 indicates that module doesn't require updates, and thus whateve
 
 How It Works
 ====================
-The module's are loaded via a Javascript request on the initial page load. From there, Ajax is used to update each module every x seconds, where x is specified in config.json for each module. You could have some modules refresh every minute and others refresh every week.
+The module's are loaded on the initial page load. From there, Ajax is used to update each module every x seconds, where x is specified in config.json for each module. You could have some modules refresh every minute and others refresh every week.
 
 Notes
 ====================

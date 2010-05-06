@@ -31,9 +31,10 @@ foreach($bars as $bar) {
     $bar = $bars[$j];
     $count = $j + 1;
     $bar_height =  ($bar->height / $max_height) * $_GET['height'];
+    $top_offset = $_GET['height'] - $bar_height;
     
 ?>
-    <div class='bar'>
+    <div class='bar' style='margin-top: <?php echo $top_offset ?>px'>
         <span class='header'><?php echo $bar->header ?></span>
         <div class='view' id='graph_<?php echo $count ?>' style='height: <?php echo $bar_height; ?>px;'></div>
         <span class='title'><?php echo $bar->name ?></span>
