@@ -15,6 +15,6 @@ if ($diff < 0) {
 
 ?>
 
-<p class='jumbo test'>
-    <em class='icon'>H</em><?php echo $result; ?>
+<p class='mega'>
+    <span class='icon'>H</span><?php echo $result; ?>
 </p>

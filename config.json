@@ -30,18 +30,21 @@
       "name": "arrow",
       "class": "mini",
       "width": 300,
+      "height": 120,
       "update": 15
     },
     
     { "name": "clock",
       "class": "mini",
       "width": 200,
+      "height": 120,
       "update": 60
     },
     {
       "name": "weather",
       "class": "mini",
       "width": 440,
+      "height": 120,
       "update": 3600
     },
     {

@@ -11,15 +11,17 @@ $data = array(
 /* DISPLAY */
 ?>
 
-<table border='0' width='100%' cellpadding='0' cellspacing='0'>
+<table border='0' width='100%' cellpadding='0' cellspacing='10'>
 <?php
-
+$count = 0;
 foreach($data as $row) {
-    echo '<tr>';
+    $class = ($count % 2 == 1 ? " class='alt'" : '');
+    echo "<tr$class>";
     for($j = 0; $j < count($row); $j++) {
         echo "<td class='cell_$j'>$row[$j]</td>";
     }
     echo '</tr>';
+    $count++;
 }
 
 ?>
