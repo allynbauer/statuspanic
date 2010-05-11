@@ -7,6 +7,7 @@
       "name": "bargraph",
       "width": 1000,
       "update": 15,
+      "class": "middle",
       "args": {
         "height": 300
       }
@@ -21,31 +22,42 @@
       "width": 1000,
       "update": 3600,
       "args": {
-        "event": "UNTIL T8",
+        "event": "UNTIL SOMETHING",
         "stop": 1274706000
       }
     },
     
     {
       "name": "arrow",
-      "class": "mini",
+      "class": "mini middle",
       "width": 300,
       "height": 120,
       "update": 15
     },
     
     { "name": "clock",
-      "class": "mini",
+      "class": "mini middle",
       "width": 200,
       "height": 120,
       "update": 60
     },
     {
       "name": "weather",
-      "class": "mini",
+      "class": "mini middle",
       "width": 440,
       "height": 120,
       "update": 3600
+    },
+    {
+      "name": "space",
+      "width": 310,
+      "update": 0
+    },
+    {
+      "name": "bubblelist",
+      "width": 200,
+      "update": 0,
+      "class": "mini"
     },
     {
       "name": "meta",

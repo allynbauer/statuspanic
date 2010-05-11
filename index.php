@@ -22,14 +22,13 @@ elseif ($data->rotate === 'right') {
 $width = (isset($data->width) ? $data->width . 'px' : '100%');
 
 function render($module) {
-    $argstr = "''";
-    if (isset($module->args)) {
-        $argstr = array();
-        foreach($module->args as $key => $val) {
-            $argstr[] = "$key=" . urlencode($val);
-        }
-        $argstr = "'" . implode("&", $argstr) . "'";
+    $argstr = array();
+    $args = $module->args;
+    $args->width = $module->width;
+    foreach($args as $key => $val) {
+        $argstr[] = "$key=" . urlencode($val);
     }
+    $argstr = "'" . implode("&", $argstr) . "'";
     
     $style = "width: {$module->width}px;";
     if ($module->height) $style .= " height: {$module->height}px";
@@ -59,7 +58,6 @@ function render($module) {
     </style>
 </head>
 <body>
-    <div id='spacer'></div>
     <div id='board'>
         <?php 
         foreach($data->modules as $module)

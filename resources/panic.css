@@ -1,3 +1,5 @@
+/* @group FONT */
+
 @font-face {
   font-family: 'Cutouts';
   src: url('cutouts.ttf') format('truetype');
@@ -19,9 +21,21 @@
   	font-style: normal;
 }
 
-@font-face {
-	font-family: 'FunnyFaces';
-	src: url('face.ttf') format('truetype');
+/* @end */
+
+/* @group GENERAL */
+
+body {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 18px;
+	background-color: #0a0a0a;
+	color: #fff;
+	vertical-align: middle;
+	height: 100%;
+}
+
+#board {
+	margin: 0 auto;
 }
 
 .icon {
@@ -30,12 +44,10 @@
 	font-family: 'Cutouts';
 }
 
-body {
-	font-family: verdana, arial, helvetica, sans-serif;
-	font-size: 18px;
-	background-color: #0a0a0a;
-	color: #fff;
-	vertical-align: middle;
+.module {
+	float: left;
+	text-align: center;
+	margin: 10px;
 }
 
 .mini {
@@ -43,12 +55,6 @@ body {
   border: 5px solid #1c2020;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
-}
-
-.module {
-	float: left;
-	text-align: center;
-	margin: 10px;
 }
 
 .jumbo {
@@ -59,18 +65,19 @@ body {
 	font-size: 40px;
 }
 
-#spacer {
-  margin-top: auto;
-  margin-bottom: 0;
+.middle {
+	/* .middle centers vertically with javascript */
 }
 
+.center {
+	color: #fff;
+	font-style: normal;
+	font-family: 'Cutouts';
+}
 
+/* @end */
+/* @group GRID MODULE */
 
-
-
-
-
-/* GRID MODULE */
 table {
 	font-size: 40px;
 }
@@ -80,9 +87,9 @@ td {
 	border: 1px solid #1c2020;
 	text-align: left;
 	padding-left: 10px;
+	margin: 10px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
-	margin: 10px;
 }
 
 .alt td {
@@ -94,10 +101,13 @@ tr {
 	
 }
 
+/* widths */
 .cell_0 { width: 35%; }
 .cell_1 { width: 20%; }
 .cell_2 { width: 20%; }
+.cell_3 { width: 25%; }
 
+/* custom bling */
 .cell_3 {
 	font: normal 80px/50px 'FreakyFace';
 	padding-left: 5px;
@@ -106,9 +116,19 @@ tr {
 	letter-spacing: 4px;
 }
 
-/* END GRID MODULE */
+/* @end */
+/* @group META MODULE */
 
-/* ARROW MODULE */
+#countdown>div {
+	margin: 25px 0;
+}
+
+a {
+  color: #fff;
+}
+
+/* @end */
+/* @group ARROW MODULE */
 
 #arrow_icon {
 	font: normal 65px 'Cutouts';
@@ -129,27 +149,79 @@ tr {
 	color: #3d69fe;
 }
 
-/* END ARROW MODULE */
+/* @end */
+/* @group BUBBLE LIST MODULE */
 
-/* COUNTDOWN MODULE */
+ul {
+    list-style-type: none;
+	padding: 0;
+	margin: 0;
+	clear: left;
+}
+
+li {
+	display: block;
+	float: left;
+    clear: left;
+    padding: 5px;
+}
+
+li .content {
+    display: block;
+    line-height: 40px;
+    float: left;
+    margin-left: 10px;
+    font-size: 28px;
+}
+
+.bubble span {
+	display: block;
+    width: 40px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+
+.bubble .background {
+    font-style: normal;
+	font-family: 'Cutouts';
+	font-size: 70px;
+}
+
+.bubble.red .background {
+    color: #d81817;
+}
+
+.bubble.orange .background {
+    color: #fc5005;
+}
+
+.bubble .display {
+    text-align: center;
+    margin-left: -30px;
+    font-size: 20px;
+}
+
+/* @end */
+/* @group COUNTDOWN MODULE */
+
 .event {
 	color: #9c9b98;
 }
-/* END COUNTDOWN MODULE */
 
-/* GRAPH MODULE */
-.graph {
-	margin-right: auto;
-	margin-left: auto;
-	width: auto;
+/* @end */
+/* @group GRAPH MODULE */
+
+#bargraph>div {
 }
 
 .bar {
 	position: relative;
 	height: auto;
-	width: 170px;
 	float: left;
-	padding: 0 12px 0 12px;
+	padding: 0 12px;
 }
 
 .bar .view {
@@ -159,34 +231,40 @@ tr {
 	-moz-border-radius: 3px;
 }
 
-#graph_1 {
+#bar_1 {
 	background: #FABD15;
 	border-color: #FABD15;
 	border-left-color: #d5a110;
 }
 
-#graph_2 {
+#bar_2 {
 	background: #49C817;
 	border-color: #49C817;
 	border-left-color: #38a410;
 }
 
-#graph_3 {
+#bar_3 {
 	background: #FD3B15;
 	border-color: #FD3B15;
 	border-left-color: #cd2e14;
 }
 
-#graph_4 {
+#bar_4 {
 	background: #7554BF;
 	border-color: #7554BF;
 	border-left-color: #6345a5;
 }
 
-#graph_5 {
+#bar_5 {
 	background: #107CF8;
 	border-color: #107CF8;
 	border-left-color: #3368d7;
 }
 
-/* END GRAPH MODULE */
+#bar_6 {
+	background: #d8d309;
+	border-color: #beba06;
+	border-left-color: #d8d309;
+}
+
+/* @end */

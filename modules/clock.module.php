@@ -2,10 +2,12 @@
 
 date_default_timezone_set('America/Chicago');
 
+/* DATA */
 $time = date('g:i a');
 
+/* DISPLAY */
 ?>
 
-<p class='jumbo' style='line-height: 50px'>
+<div class='jumbo'>
     <span class='icon'>H</span><?php echo $time; ?>
-</p>
+</div>

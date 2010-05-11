@@ -19,6 +19,8 @@ if ($num > 0) {
     $code = 'K';
 }
 ?>
-    
-<span class='<?php echo $class ?>' id='arrow_icon'><?php echo $code ?></span>
-<span class='mega'><?php echo $num ?>%</span>
+
+<div>    
+    <span class='<?php echo $class ?>' id='arrow_icon'><?php echo $code ?></span>
+    <span class='mega'><?php echo $num ?>%</span>
+</div>

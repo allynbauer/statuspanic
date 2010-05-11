@@ -1,5 +1,10 @@
 <?php
 
+/* DATA */
+$zipcode ='50613';
+
+/* DISPLAY */
+
 // found at php.net
 function xml2array($url, $get_attributes = 1, $priority = 'tag') {
     $contents = "";
@@ -140,9 +145,6 @@ function xml2array($url, $get_attributes = 1, $priority = 'tag') {
 }
 
 
-$zipcode ='50613';
-
-/* DATA */
 while(true) {
     $url = 'http://api.wunderground.com/auto/wui/geo/WXCurrentObXML/index.xml?query=';
     $data = xml2array($url . $zipcode);
@@ -155,11 +157,11 @@ while(true) {
 
 $data = $data['current_observation'];
 
-
-/* DISPLAY */
 ?>
 
-<span class='jumbo'>Weather in <?php echo $data['display_location']['city'] ?></span>
 <div>
-    <?php echo $data['temp_f'] . '&deg; F, ' . $data['weather'] ?></li>
+    <span class='jumbo'>Weather in <?php echo $data['display_location']['city'] ?></span>
+    <div>
+        <?php echo $data['temp_f'] . '&deg; F, ' . $data['weather'] ?></li>
+    </div>
 </div>
