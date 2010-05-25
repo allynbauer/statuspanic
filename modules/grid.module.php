@@ -2,14 +2,15 @@
 
 /* DATA */
 $data = array(
-  array('TRANSMIT',     'Blurb', 'Blarb', 'ZH'),
-  array('UNISON',       'Blurb', 'Blarb', 'ZLI'),
-  array('CODA',         'Blurb', 'Blarb', 'ZHP'),
-  array('OTHER THING',  'Blurb', 'Blarb', 'GL'),
-  array('EXCITING',     'Blurb', 'Blarb', 'LGI')
+  array('TRANSMIT',     'Blurb', 'Blarb', 'Z@statuspanic, H@statuspanic'),
+  array('UNISON',       'Blurb', 'Blarb', 'Z@statuspanic, L@statuspanic, I@statuspanic'),
+  array('CODA',         'Blurb', 'Blarb', 'Z@statuspanic, H@statuspanic, P@statuspanic'),
+  array('OTHER THING',  'Blurb', 'Blarb', 'G@statuspanic, L@statuspanic'),
+  array('EXCITING',     'Blurb', 'Blarb', 'L@statuspanic, G@statuspanic, I@statuspanic')
 );
 
 /* DISPLAY */
+
 ?>
 
 <div>
@@ -20,7 +21,17 @@ $data = array(
         $class = ($count % 2 == 1 ? " class='alt'" : '');
         echo "<tr$class>";
         for($j = 0; $j < count($row); $j++) {
-            echo "<td class='cell_$j'>$row[$j]</td>";
+            if ($j!=3) {
+                echo "<td class='cell_$j'>$row[$j]</td>";
+            } else {
+                $gravatar = ''; 
+                $array = preg_split('/,/', $row[$j], -1, PREG_SPLIT_NO_EMPTY);
+                foreach ($array as $email) {
+                    $gravatar .= '<img src="http://www.gravatar.com/avatar.php?gravatar_id='. md5($email) .'&s=40&d=monsterid"> ';            
+                }
+                echo "<td class='cell_$j'>$gravatar</td>";
+            }
+
         }
         echo '</tr>';
         $count++;

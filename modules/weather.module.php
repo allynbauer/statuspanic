@@ -1,7 +1,8 @@
 <?php
 
 /* DATA */
-$zipcode ='50613';
+/* $zipcode ='50613'; */
+$zipcode = $_GET['zipcode'];
 
 /* DISPLAY */
 
@@ -159,7 +160,7 @@ $data = $data['current_observation'];
 
 ?>
 
-<div>
+<div class="vertical-center height-3">
     <span class='jumbo'>Weather in <?php echo $data['display_location']['city'] ?></span>
     <div>
         <?php echo $data['temp_f'] . '&deg; F, ' . $data['weather'] ?></li>
