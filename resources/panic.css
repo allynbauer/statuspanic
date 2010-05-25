@@ -13,14 +13,14 @@
   font-weight: normal;
   font-style: normal;
 }
-/*
+
 @font-face {
 	font-family: 'FreakyFace';
 	src: url('TheFreakyFace.otf');
 	font-weight: normal;
   	font-style: normal;
 }
-*/
+
 /* @end */
 
 /* @group GENERAL */
@@ -138,12 +138,10 @@ tr {
 .cell_3 {
     /*
 	font: normal 70px/50px 'FreakyFace';
-	*/
-	font: normal 50px 'FreakyFace';	
 	padding-top: 10px;
-
-	width: 25%;
 	letter-spacing: 4px;
+	*/
+	width: 25%;
 }
 
 /* @end */
@@ -340,7 +338,10 @@ li .content {
 #bar_6 {
 	background: #d8d309;
 	border-color: #d8d309;
-	border-left-color: #beba06;
+/*	border-left-color: #beba06; */
+	border-left-color: #ede80a;
+	border-top-color: #ede80a;	
+    border-right-color: #beba06;	
 }
 
 /* @end */
