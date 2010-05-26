@@ -16,5 +16,5 @@ $time = date($format);
 ?>
 
 <div class='jumbo vertical-center'>
-    <span class='icon'>H</span><?php echo $time; ?>
+    <span class='clock'></span><?php echo $time; ?>
 </div>
