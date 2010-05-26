@@ -32,8 +32,8 @@ body {
 	color: #fff;
 	vertical-align: middle;
 	height: 100%;
-    text-shadow: rgb(0,0,0) 0px 0px 0.2em;      
-    -webkit-text-stroke: 1px transparent; 
+    text-shadow: rgb(0,0,0) 0px 0px 0.2em;
+    -webkit-text-stroke: 1px transparent;
 }
 
 #board {
@@ -51,20 +51,20 @@ body {
 .star {
     display: block;
     border-style:solid;
-    border-color:transparent; 
+    border-color:transparent;
     width:50px;
     height:50px;
-    position: relative;    
+    position: relative;
 	display: block;
-    float:left;  	
+    float:left;
     top: -0.5em;
-    left: 3em;                           
+    left: 3em;
 }
 .star span {
 	display: block;
-    float:left;  	
-    border-style: solid;	
-	position: absolute;	
+    float:left;
+    border-style: solid;
+	position: absolute;
 }
 .star .top{
     /*	top, right, bottom */
@@ -78,14 +78,14 @@ body {
 .star .center {
     border-color: #ded00b transparent transparent ;
     border-width: 31px 47px 0px 47px;
-	left: 5px;  	
-	top: 27px; 
+	left: 5px;
+	top: 27px;
 }
 .star .bottom {
     border-color: transparent transparent #0A0A0A;
     border-width: 0px 30px 22px;
-	top: 58px; 
-	left: 22px;    	
+	top: 58px;
+	left: 22px;
 }
 .star .text {
 	color: #000;
@@ -93,9 +93,9 @@ body {
 	font-weight: bold;
 	font-size: 32px;
 	z-index: 100;
-    border-style: none;	
-	left: 46px;  	
-	top: 22px;     
+    border-style: none;
+	left: 46px;
+	top: 22px;
 }
 
 
@@ -109,12 +109,12 @@ body {
   background-color: #1c2020;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#454f4f), to(#111));	  
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#454f4f), to(#111));
 }
 
 
 .bluegradient {
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c5660), to(#091b31));	  
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c5660), to(#091b31));
 }
 
 .jumbo {
@@ -124,7 +124,7 @@ body {
     top: 50%;
 	position: relative;
     margin-top: -0.5em;
-    height: 1em;	
+    height: 1em;
 }
 .height-2 {
     margin-top: -1em;
@@ -154,11 +154,11 @@ table {
 td {
 	background-color: #1c2020;
 	text-align: left;
-	padding-left: 10px; 
+	padding-left: 10px;
 	margin: 10px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#222), color-stop(0.5, #222), color-stop(0.5, #333));           
+    background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#222), color-stop(0.5, #222), color-stop(0.5, #333));
     border-bottom: 1px solid #555;
 	vertical-align: middle;
 }
@@ -166,12 +166,12 @@ td {
 .alt td {
 	background-color: #1f222d;
 	border-color: #1f222d;
-    background: -webkit-gradient(linear, left top, left bottom, from(#1f222d), to(#333), color-stop(0.5, #333), color-stop(0.5, #1f222d));               
+    background: -webkit-gradient(linear, left top, left bottom, from(#1f222d), to(#333), color-stop(0.5, #333), color-stop(0.5, #1f222d));
     border-bottom: 1px solid #555;
 }
 
 tr {
-	
+
 }
 
 /* widths */
@@ -205,7 +205,7 @@ a {
 /* @group ARROW MODULE */
 
 #arrow_icon {
-	display: block;	
+	display: block;
 }
 
 .uparrow {
@@ -216,13 +216,13 @@ a {
     width: 0px;
     margin-top: 18px;
     margin-left: 132px;     /* (300/2) - 18 */
-}      
+}
 
 
 .downarrow {
     border-color: #e31d18 transparent transparent transparent;
     border-style: solid;
-    border-width: 40px 18px 0px; 
+    border-width: 40px 18px 0px;
     height: 0px;
     width: 0px;
     margin-top: 18px;
@@ -268,12 +268,12 @@ li .content {
     height: 40px;
     background: #333;
     -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;	
+    -webkit-border-radius: 20px;
     position: relative;
     float: left;
 }
 .bubble span {
-    position: relative; 
+    position: relative;
     top: 6px;
 }
 
@@ -287,8 +287,8 @@ li .content {
 
 .bubble .display {
     text-align: center;
-/*    margin-left: -30px; */
     font-size: 20px;
+    top: 9px;
 }
 
 /* @end */
@@ -312,10 +312,10 @@ li .content {
 }
 .bars {
     border-bottom: 1px solid #999;
-	float: left;    
+	float: left;
 }
 .bar-title {
-	margin-top: 12px;	
+	margin-top: 12px;
 	float: left;
 }
 
@@ -333,8 +333,6 @@ li .content {
 .bar .remaining {
     color: #6cdaff;
 }
-
-
 
 .bar .view {
 	border-width: 3px;
@@ -361,7 +359,7 @@ li .content {
 /*	border-left-color: #38a410; */
     border-left-color: #4fdd15;
 	border-top-color: #4fdd15;
-	border-right-color: #38a410;	
+	border-right-color: #38a410;
 }
 
 #bar_3 {
@@ -370,16 +368,16 @@ li .content {
 /*	border-left-color: #cd2e14; */
     border-left-color: #ff4c21;
 	border-top-color: #ff4c21;
-	border-right-color: #cd2e14;		
+	border-right-color: #cd2e14;
 }
 
 #bar_4 {
 	background: #7554BF;
 	border-color: #7554BF;
 /*	border-left-color: #6345a5; */
-	border-left-color: #835dd7;	
-	border-top-color: #835dd7;	
-	border-right-color: #6345a5; 
+	border-left-color: #835dd7;
+	border-top-color: #835dd7;
+	border-right-color: #6345a5;
 }
 
 #bar_5 {
@@ -387,8 +385,8 @@ li .content {
 	border-color: #107CF8;
 /*	border-left-color: #3368d7; */
 	border-left-color: #1288ff;
-	border-top-color: #1288ff;	
-    border-right-color: #3368d7;	
+	border-top-color: #1288ff;
+    border-right-color: #3368d7;
 }
 
 #bar_6 {
@@ -396,8 +394,16 @@ li .content {
 	border-color: #d8d309;
 /*	border-left-color: #beba06; */
 	border-left-color: #ede80a;
-	border-top-color: #ede80a;	
-    border-right-color: #beba06;	
+	border-top-color: #ede80a;
+    border-right-color: #beba06;
+}
+.stock {
+    text-transform: uppercase;
+}
+.stock img {
+    vertical-align: text-top;
 }
 
+
 /* @end */
+

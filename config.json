@@ -6,7 +6,7 @@
     {
       "name": "bargraph",
       "width": 980,
-      "update": 15, 
+      "update": 15,
       "class": "middle",
       "args": {
         "height": 300
@@ -20,7 +20,7 @@
     {
       "name": "countdown",
       "width": 980,
-      "update": 3600, 
+      "update": 3600,
       "args": {
         "event": "UNTIL SOMETHING",
         "stop": 1274706000,
@@ -32,7 +32,7 @@
       "class": "mini middle",
       "width": 300,
       "height": 120,
-      "update": 15, 
+      "update": 15,
       "args": {
         "value": ""
       }
@@ -42,18 +42,18 @@
       "class": "mini middle",
       "width": 200,
       "height": 120,
-      "update": 60, 
+      "update": 60,
       "args": {
         "timezone": "America/Chicago",
         "format": "h:i a"
-      }      
+      }
     },
     {
       "name": "weather",
       "class": "mini middle",
       "width": 440,
       "height": 120,
-      "update": 3600, 
+      "update": 3600,
       "args": {
         "zipcode": "50613"
       }
@@ -70,9 +70,20 @@
       "class": "mini bluegradient"
     },
     {
+      "name": "newsticker",
+      "width": 980,
+      "update": 3600
+    },
+    {
+      "name": "stockticker",
+      "width": 980,
+      "update": 3600
+    },
+    {
       "name": "meta",
       "width": 980,
       "update": 0
     }
   ]
 }
+
