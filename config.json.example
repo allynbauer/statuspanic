@@ -64,6 +64,17 @@
       "update": 0
     },
     {
+     "name": "chargify",
+      "class": "mini middle",
+      "width": 200,
+      "height": 120,
+      "update": 60,
+      "args": {
+          "api_key": "YOUR_CHARGIFY_API_KEY",
+          "domain": "YOUR_CHARGIFY_SUBDOMAIN"
+      }
+    },
+    {
       "name": "bubblelist",
       "width": 200,
       "update": 0,
