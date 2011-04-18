@@ -4,18 +4,13 @@
   "rotate": "no",
   "modules": [
     {
-      "name": "bargraph",
+      "name": "chargify",
       "width": 980,
-      "update": 15,
-      "class": "middle",
+      "update": 300,
       "args": {
-        "height": 300
+        "api_key": "YOUR_CHARGIFY_API_KEY",
+        "domain": "YOUR_CHARGIFY_SUBDOMAIN"
       }
-    },
-    {
-      "name": "grid",
-      "width": 980,
-      "update": 300
     },
     {
       "name": "countdown",
@@ -23,7 +18,7 @@
       "update": 3600,
       "args": {
         "event": "UNTIL SOMETHING",
-        "stop": 1274706000,
+        "stop": 1379906000,
         "timezone": "America/Chicago"
       }
     },
@@ -34,7 +29,7 @@
       "height": 120,
       "update": 15,
       "args": {
-        "value": ""
+        "value": "10"
       }
     },
     {
@@ -57,33 +52,6 @@
       "args": {
         "zipcode": "78216"
       }
-    },
-    {
-      "name": "space",
-      "width": 300,
-      "update": 0
-    },
-    {
-     "name": "chargify",
-      "class": "mini middle",
-      "width": 200,
-      "height": 120,
-      "update": 60,
-      "args": {
-          "api_key": "YOUR_CHARGIFY_API_KEY",
-          "domain": "YOUR_CHARGIFY_SUBDOMAIN"
-      }
-    },
-    {
-      "name": "bubblelist",
-      "width": 200,
-      "update": 0,
-      "class": "mini bluegradient"
-    },
-    {
-      "name": "meta",
-      "width": 980,
-      "update": 0
     }
   ]
 }

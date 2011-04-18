@@ -1,36 +1,45 @@
 <?php
-require_once 'Chargify-PHP-Client/lib/Chargify.php';
 
 $domain = $_GET['domain'];
 $api_key = $_GET['api_key'];
+$data = array(
+  array('', 'Today', 'Month', 'Year', 'Total')
+);
 
-$test_mode = true;
-$request_format = 'JSON';
-$connector = new ChargifyConnector( $test_mode, $domain, $api_key );
+if( $domain && $api_key ){
+  
+  $stats_url = "https://$api_key:x@$domain.chargify.com/stats.json";
 
-$page = 1;
-$per_page = 100;
+  $json = file_get_contents( $stats_url );
 
-$foo = 0;
-$bar = 0;
+  $stats = json_decode( $json );
+  $stats = $stats->{'stats'};
+ 
+  $data[] = array('Subscriptions', $stats->subscriptions_today, '', '', $stats->total_subscriptions);
+  $data[] = array('Revenue', $stats->revenue_today, $stats->revenue_this_month, $stats->revenue_this_year, $stats->total_revenue);
 
-function is_active( $subscription ){
-    return ('active' == $subscription->state);
+} else {
+  error_log( "Are api_key and domain set in config.json? I got [$api_key] and [$domain]." );
 }
 
-function is_trial( $subscription ){
-    return ('trialing' == $subscription->state);
-}
-
-try {
-    $subscriptions = $connector->getSubscriptions( $page, $per_page );
-    $foo = count( array_filter($subscriptions, 'is_active') );
-    $bar = count( array_filter($subscriptions, 'is_trial') );
-} catch (Exception $e) {
-    $foo = $e->getMessage();
-}
 
 ?>
-  <div class='jumbo vertical-center'>
-      <span class='chargify'><?php echo $foo; ?> / <?php echo $bar; ?></span>
-  </div>
+    <div>
+        <table border='0' width='100%' cellpadding='0' cellspacing='10'>
+        <?php
+        $count = 0;
+        foreach($data as $row) {
+            $class = ($count % 2 == 1 ? " class='alt'" : '');
+            echo "<tr$class>";
+            for($j = 0; $j < count($row); $j++) {
+                    echo "<td>$row[$j]</td>";
+
+            }
+            echo '</tr>';
+            $count++;
+        }
+
+        ?>
+
+        </table>
+    </div>
