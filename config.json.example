@@ -6,6 +6,8 @@
     {
       "name": "chargify",
       "width": 980,
+      "height": "",
+      "class": "",
       "update": 300,
       "args": {
         "api_key": "YOUR_CHARGIFY_API_KEY",
