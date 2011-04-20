@@ -31,7 +31,7 @@ function render($module) {
     $argstr = "'" . implode("&", $argstr) . "'";
     
     $style = "width: {$module->width}px;";
-    if ($module->height) $style .= " height: {$module->height}px";
+    if (isset($module->height)) $style .= " height: {$module->height}px";
     echo "<div class='module $module->class' id='$module->name' style='$style'></div>\n";
     echo "\t<script type='text/javascript'>activate_module('$module->name', $module->update, $argstr);</script>\n\n";
 }
