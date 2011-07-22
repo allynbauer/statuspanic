@@ -22,8 +22,8 @@
       "width": 980,
       "update": 3600, 
       "args": {
-        "event": "UNTIL Aug 31",
-        "stop": 1314834311,
+        "event": "until Next Ship (Aug 15)",
+        "stop": 1313438400,
         "timezone": "America/Los_Angeles"
       }
     },
