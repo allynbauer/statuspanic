@@ -4,6 +4,15 @@
   "rotate": "no",
   "modules": [
     {
+      "name": "label",
+      "width": 980,
+      "update": 0,
+      "class": "middle",
+      "args": {
+        "text": "Status Board"
+      }
+    },
+    {
       "name": "bargraph",
       "width": 980,
       "update": 15,
