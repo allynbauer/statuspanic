@@ -15,7 +15,11 @@
     {
       "name": "grid",
       "width": 980,
-      "update": 300
+      "update": 300,
+      "args": {
+        "datadir": "griddata",
+        "items": "transmit,unison,coda,otherthing,exciting"
+      }
     },
     {
       "name": "countdown",
