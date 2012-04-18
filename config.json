@@ -76,7 +76,11 @@
     {
       "name": "newsticker",
       "width": 980,
-      "update": 3600
+      "update": 3600,
+      "args": {
+        "datadir": "news",
+        "items": "createdby,githublink,date"
+      }
     },
     {
       "name": "stockticker",
