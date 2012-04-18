@@ -18,7 +18,9 @@
       "update": 15,
       "class": "middle",
       "args": {
-        "height": 300
+        "height": 300,
+        "datadir": "bargraphdata",
+        "items": "transmit,coda,unison,candybar,general,secrets"
       }
     },
     {
