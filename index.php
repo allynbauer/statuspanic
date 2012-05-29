@@ -29,7 +29,6 @@ function render($module) {
         $argstr[] = "$key=" . urlencode($val);
     }
     $argstr = "'" . implode("&", $argstr) . "'";
-    
     $style = "width: {$module->width}px;";
     if ($module->height) $style .= " height: {$module->height}px";
     echo "<div class='module $module->class' id='$module->name' style='$style'></div>\n";
