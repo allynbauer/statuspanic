@@ -15,6 +15,6 @@ $time = date($format);
 /* DISPLAY */
 ?>
 
-<div class='jumbo vertical-center'>
+<div class='mega vertical-center'>
     <span class='icon'>H</span><?php echo $time; ?>
 </div>

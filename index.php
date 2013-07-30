@@ -8,22 +8,11 @@ $data = json_decode($data);
 
 if (!$data) die('JSON syntax error in "'.CONFIG.'"');
 
-if ($data->rotate === 'left') {
-    $rotate = '-webkit-transform: rotate(-90deg);';
-}
-elseif ($data->rotate === 'right') {
-    $rotate = '-webkit-transform: rotate(90deg);';
-} elseif ($data->rotate === 'flip') {
-    $rotate = '-webkit-transform: rotate(180deg);';
-} else {
-    $rotate = FALSE;
-}
-
 $width = (isset($data->width) ? $data->width . 'px' : '100%');
 
 function render($module) {
     $argstr = array();
-    $args = $module->args;
+    $args = isset($module->args) ? $module->args : NULL;
     $args->width = $module->width;
     foreach($args as $key => $val) {
         $argstr[] = "$key=" . urlencode($val);
@@ -31,8 +20,9 @@ function render($module) {
     $argstr = "'" . implode("&", $argstr) . "'";
     
     $style = "width: {$module->width}px;";
-    if ($module->height) $style .= " height: {$module->height}px";
-    echo "<div class='module $module->class' id='$module->name' style='$style'></div>\n";
+    $class = isset($module->class) ? $module->class : '';
+    if (isset($module->height)) $style .= " height: {$module->height}px";
+    echo "<div class='module $class' id='$module->name' style='$style'></div>\n";
     echo "\t<script type='text/javascript'>activate_module('$module->name', $module->update, $argstr);</script>\n\n";
 }
 
