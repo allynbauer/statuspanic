@@ -161,8 +161,8 @@ $data = $data['current_observation'];
 ?>
 
 <div class="vertical-center height-3">
-    <span class='jumbo'>Weather in <?php echo $data['display_location']['city'] ?></span>
-    <div>
-        <?php echo $data['temp_f'] . '&deg; F, ' . $data['weather'] ?></li>
+    <div class='jumbo'>
+        <?php echo $data['temp_f'] . '&deg; F, ' . $data['weather'] ?>
     </div>
+    <div><?php echo $data['display_location']['zip'] ?> / <?php echo $data['display_location']['city'] ?></div>
 </div>
