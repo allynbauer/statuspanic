@@ -82,6 +82,10 @@ body {
     height: 3em;
 }
 
+.padding {
+	padding: 1.5em;
+}
+
 .mega {
 	font-size: 40px;
 }

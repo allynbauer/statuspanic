@@ -1,7 +1,6 @@
 {
   "width": 1000,
   "title": "Status Board",
-  "rotate": "no",
   "modules": [
     {
       "name": "bargraph",
