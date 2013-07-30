@@ -8,17 +8,6 @@ $data = json_decode($data);
 
 if (!$data) die('JSON syntax error in "'.CONFIG.'"');
 
-if ($data->rotate === 'left') {
-    $rotate = '-webkit-transform: rotate(-90deg);';
-}
-elseif ($data->rotate === 'right') {
-    $rotate = '-webkit-transform: rotate(90deg);';
-} elseif ($data->rotate === 'flip') {
-    $rotate = '-webkit-transform: rotate(180deg);';
-} else {
-    $rotate = FALSE;
-}
-
 $width = (isset($data->width) ? $data->width . 'px' : '100%');
 
 function render($module) {
