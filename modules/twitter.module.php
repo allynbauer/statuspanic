@@ -25,16 +25,16 @@ try {
 
 ?>
 
-<div>
-	<table class="padding">
-        <tr><th class="jumbo" colspan='2'><?php echo $label; ?></th></tr>
+<div class="twitter">
+	<table>
+        <tr><th class="jumbo header" colspan='2'><?php echo $label; ?></th></tr>
         <?php
     	for ($i = 0; $i < $_GET['count']; $i++) {
     		$status = $statuses[$i];
         	$message = $status->text;
         	$when = $status->created_at;
         	$who = $status->user->name;?>
-            <tr><td><?php echo $who; ?></td><td><?php echo $message; ?></td></tr>
+            <tr><td class="author"><?php echo $who; ?></td><td class="tweet"><?php echo $message; ?></td></tr>
         <?php } ?>
     </table>
 </div>

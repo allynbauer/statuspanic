@@ -6,7 +6,7 @@ if (empty($_GET['branch'])) { $branch = "master"; } else { $branch = $_GET['bran
 $repo = $_GET['repo']."commits/".$branch.".atom";
 $repo = fetch_rss( $repo );
 $feed_name = $repo->channel['title'];
-//var_dump($repo);
+
 ?>
 
 <div class="grid">

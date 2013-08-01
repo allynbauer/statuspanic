@@ -160,7 +160,7 @@ $data = $data['current_observation'];
 
 ?>
 
-<div class="vertical-center height-3">
+<div class="padding">
     <div class='jumbo'>
         <?php echo $data['temp_f'] . '&deg; F, ' . $data['weather'] ?>
     </div>
