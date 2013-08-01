@@ -9,7 +9,7 @@ $feed_name = $repo->channel['title'];
 //var_dump($repo);
 ?>
 
-<div>
+<div class="grid">
 	<span class="jumbo"><?php echo $feed_name ?></span>
     <table border='0' width='100%' cellpadding='0' cellspacing='10'>
     <?php

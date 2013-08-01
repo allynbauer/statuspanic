@@ -103,12 +103,12 @@ body {
 /* @end */
 /* @group GRID MODULE */
 
-table {
+.grid table {
 	font-size: 32px;
 	border-spacing: 10px 10px;
 }
 
-td {
+.grid td {
 	background-color: #1c2020;
 /*	border: 1px solid #1c2020; */
 	text-align: left;
@@ -121,27 +121,11 @@ td {
 	vertical-align: middle;
 }
 
-.alt td {
+.grid .alt td {
 	background-color: #1f222d;
 	border-color: #1f222d;
   background: -webkit-gradient(linear, left top, left bottom, from(#1f222d), to(#333), color-stop(0.5, #333), color-stop(0.5, #1f222d));               
   border-bottom: 1px solid #555;
-}
-
-tr {
-	
-}
-
-/* widths */
-.cell_0 { width: 35%; }
-.cell_1 { width: 20%; }
-.cell_2 { width: 20%; }
-.cell_3 { width: 25%; }
-
-/* custom bling */
-.cell_3 {
-	padding-top: 10px;
-	width: 25%;
 }
 
 /* @end */
