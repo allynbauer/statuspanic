@@ -17,13 +17,16 @@ function render($module) {
     foreach($args as $key => $val) {
         $argstr[] = "$key=" . urlencode($val);
     }
-    $argstr = "'" . implode("&", $argstr) . "'";
+    $argstr = implode("&", $argstr);
     
     $style = "width: {$module->width}px;";
     $class = isset($module->class) ? $module->class : '';
     if (isset($module->height)) $style .= " height: {$module->height}px";
-    echo "<div class='module $class' id='$module->name' style='$style'></div>\n";
-    echo "\t<script type='text/javascript'>activate_module('$module->name', $module->update, $argstr);</script>\n\n";
+    if (!isset($module->type)) $module->type = $module->name; //backwards compatability
+
+    echo "<div class='module $class' id='$module->name' style='$style'>
+    <script type='text/javascript'>activate_module('$module->name', '$module->type', $module->update, '$argstr');</script>
+    </div>\r\n";
 }
 
 ?>
@@ -32,21 +35,14 @@ function render($module) {
 <html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title><?php echo (isset($data->title) ? $data->title : 'statuspanic generic status board') ?></title>
+    <title><?php echo (isset($data->title) ? $data->title : 'statuspanic') ?></title>
     <link rel='stylesheet' type='text/css' href='resources/reset.css' />
     <link rel='stylesheet' type='text/css' href='resources/panic.css' />
+    <style type='text/css'>
+        #board { <?php echo "width: $width;"; ?> }
+    </style>
     <script type='text/javascript' src='resources/jquery.js'></script>
     <script type='text/javascript' src='resources/board.js'></script>
-    <style type='text/css'>
-        #board {
-        <?php if ($rotate) {
-            echo $rotate;
-            echo "height: $width;";
-        } else {
-            echo "width: $width;";
-        } ?>
-    }
-    </style>
 </head>
 <body>
     <div id='board'>

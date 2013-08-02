@@ -15,5 +15,4 @@ The modules are loaded on the initial page load. From there, Ajax is used to upd
 To-dos
 ====================
 + change up how modules are stored to better allow for external libraries
-+ allow for more than one "module type" at a time without duplicating the module's files
 + continue updating the css
