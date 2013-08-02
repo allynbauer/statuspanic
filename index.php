@@ -33,6 +33,7 @@ function render($module) {
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title><?php echo (isset($data->title) ? $data->title : 'statuspanic generic status board') ?></title>
+    <link rel='stylesheet' type='text/css' href='resources/reset.css' />
     <link rel='stylesheet' type='text/css' href='resources/panic.css' />
     <script type='text/javascript' src='resources/jquery.js'></script>
     <script type='text/javascript' src='resources/board.js'></script>

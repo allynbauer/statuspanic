@@ -2,9 +2,25 @@
 
 require_once("./magpie/rss_fetch.inc");
 
-if (empty($_GET['branch'])) { $branch = "master"; } else { $branch = $_GET['branch']; }
-$repo = $_GET['repo']."commits/".$branch.".atom";
-$repo = fetch_rss( $repo );
+if (empty($_GET['branch'])) {
+    $branch = "master";
+} else {
+    $branch = $_GET['branch'];
+}
+
+try {
+    $repo = fetch_rss( $_GET['repo']."commits/".$branch.".atom" );    
+} catch (Exception $e) {
+    ?>
+    <div>
+        <div class="jumbo">Github Module</div>
+        <div>Error getting commits.</div>
+        <!-- <?php $e ?> -->
+    </div>
+    <?php
+    return;
+}
+
 $feed_name = $repo->channel['title'];
 
 ?>
@@ -19,8 +35,8 @@ $feed_name = $repo->channel['title'];
     	$author = $item['author'];
     	$avatar = $item['media']['thumbnail@url'];?>
         <tr>
-        <td style='width: 600px;'><div style='overflow: hidden; width: 600px; white-space:nowrap;'><?php echo $title; ?></div></td>
-        <td><img src='<?php echo $avatar; ?>'/>&nbsp;<?php echo $author; ?></td>
+        <td style='width: 70%;'><div style='overflow: hidden; width: 100%; white-space:nowrap;'><?php echo $title; ?></div></td>
+        <td style='width: 30%;'><img src='<?php echo $avatar; ?>'/>&nbsp;<?php echo $author; ?></td>
         </tr>
     <?php } ?>
     </table>
