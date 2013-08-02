@@ -4,7 +4,7 @@ StatusPanic is a simple PHP system for creating a way to make a [Panic](http://p
 
 Configuration
 ====================
-Configuring StatusPanic is basically the first and last step of getting it running. Options are specified in [JSON](http://en.wikipedia.org/wiki/JSON) in config.json. There's a default-config.json file that gives some idea of how this should be set up. Args can be provided to a module via a GET request by adding them to an ARGS array.
+Configuring StatusPanic is basically the first and last step of getting it running. Options are specified in [JSON](http://en.wikipedia.org/wiki/JSON) in config.json. There's a config-defaults.json file that gives some idea of how this should be set up. Args can be provided to a module via a GET request by adding them to an ARGS array.
 
 An 'update' of 0 indicates that module doesn't require updates, and thus whatever is loaded the first time is what remains.
 
