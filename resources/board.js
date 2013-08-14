@@ -1,5 +1,5 @@
 function render_module(name, type, args) {
-  $('#' + name).load('modules/' + type + '.module.php?' + args);
+  $('#' + name).load('modules/' + type + '/module.php?' + args);
 }
 
 function activate_module(name, type, seconds, args) {

@@ -21,7 +21,7 @@ function render($module) {
     
     $style = "width: {$module->width}px;";
     $class = isset($module->class) ? $module->class : '';
-    if (isset($module->height)) $style .= " height: {$module->height}px";
+    $style .= isset($module->height) ? " height: {$module->height}px" : NULL;
     if (!isset($module->type)) $module->type = $module->name; //backwards compatability
 
     echo "<div class='module $class' id='$module->name' style='$style'>
@@ -41,6 +41,12 @@ function render($module) {
     <style type='text/css'>
         #board { <?php echo "width: $width;"; ?> }
     </style>
+    <?php 
+        foreach($data->modules as $module) {
+            $filename = isset($module->type) ? "./modules/".$module->type."/".$module->type.".css" : "./modules/".$module->name."/".$module->name.".css";
+            if (file_exists($filename)) echo "<link rel='stylesheet' type='text/css' href='$filename'/>";
+        }
+    ?>
     <script type='text/javascript' src='resources/jquery.js'></script>
     <script type='text/javascript' src='resources/board.js'></script>
 </head>
