@@ -8,8 +8,6 @@ $data = json_decode($data);
 
 if (!$data) die('JSON syntax error in "'.CONFIG.'"');
 
-$width = (isset($data->width) ? $data->width . 'px' : '100%');
-
 function render($module) {
     $argstr = array();
     $args = isset($module->args) ? $module->args : NULL;
@@ -24,13 +22,12 @@ function render($module) {
     $style .= isset($module->height) ? " height: {$module->height}px" : NULL;
     if (!isset($module->type)) $module->type = $module->name; //backwards compatability
 
-    echo "<div class='module $class' id='$module->name' style='$style'>
+    return "<div class='module $class' id='$module->name' style='$style'>
     <script type='text/javascript'>activate_module('$module->name', '$module->type', $module->update, '$argstr');</script>
     </div>\r\n";
 }
 
 ?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -39,11 +36,12 @@ function render($module) {
     <link rel='stylesheet' type='text/css' href='resources/reset.css' />
     <link rel='stylesheet' type='text/css' href='resources/panic.css' />
     <style type='text/css'>
-        #board { <?php echo "width: $width;"; ?> }
+        #board { width: <?php echo isset($data->width) ? $data->width.'px' : '100%'; ?> }
     </style>
-    <?php 
+    <?php
         foreach($data->modules as $module) {
-            $filename = isset($module->type) ? "./modules/".$module->type."/".$module->type.".css" : "./modules/".$module->name."/".$module->name.".css";
+            $filename = "./modules/";
+            $filename .= isset($module->type) ? $module->type."/".$module->type.".css" : $module->name."/".$module->name.".css";
             if (file_exists($filename)) echo "<link rel='stylesheet' type='text/css' href='$filename'/>";
         }
     ?>
@@ -54,7 +52,7 @@ function render($module) {
     <div id='board'>
         <?php 
         foreach($data->modules as $module)
-            render($module);
+            echo render($module);
         ?>
     </div>
 </body>

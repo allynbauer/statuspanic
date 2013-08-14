@@ -10,9 +10,9 @@ An 'update' of 0 indicates that module doesn't require updates, and thus whateve
 
 How It Works
 ====================
-The modules are loaded on the initial page load. From there, Ajax is used to update each module every x seconds, where x is specified in config.json for each module. You could have some modules refresh every minute and others refresh every week.
+The modules are loaded on the initial page load. From there, .load() is used to update each module every x seconds, where x is specified in config.json for each module. You could have some modules refresh every minute and others refresh every week. Cheat sheet: 60 seconds is a minute, 3600 is an hour, 86400 a day, and 604800 a week.
 
 To-dos
 ====================
-+ change up how modules are stored to better allow for external libraries
 + continue updating the css
++ more modules?
