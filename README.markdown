@@ -12,6 +12,12 @@ How It Works
 ====================
 The modules are loaded on the initial page load. From there, .load() is used to update each module every x seconds, where x is specified in config.json for each module. You could have some modules refresh every minute and others refresh every week. Cheat sheet: 60 seconds is a minute, 3600 is an hour, 86400 a day, and 604800 a week.
 
+Writing a Module
+====================
+The board looks for modules based on their "type", which should be a folder in the /modules directory. It then loads /modules/%type%/?arg1=foo&arg2=bar for every module defined in the JSON, and, optionally, includes a css file it looks for at /modules/%type%/%type%.css. Although the index is written in PHP, you could theoretically write a module in any language.
+
+Libraries that more than one module might need access to, such as the PHP Magpie RSS library, should be placed in /shared-libraries.
+
 To-dos
 ====================
 + continue updating the css
