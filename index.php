@@ -29,7 +29,6 @@ function render($module) {
         $argstr[] = "$key=" . urlencode($val);
     }
     $argstr = "'" . implode("&", $argstr) . "'";
-    
     $style = "width: {$module->width}px;";
     $class = isset($module->class) ? $module->class : '';
     if (isset($module->height)) $style .= " height: {$module->height}px";

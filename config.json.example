@@ -1,0 +1,59 @@
+{
+  "width": 1000,
+  "title": "Status Board",
+  "rotate": "no",
+  "modules": [
+    {
+      "name": "chargify",
+      "width": 980,
+      "height": "",
+      "class": "",
+      "update": 300,
+      "args": {
+        "api_key": "YOUR_CHARGIFY_API_KEY",
+        "domain": "YOUR_CHARGIFY_SUBDOMAIN"
+      }
+    },
+    {
+      "name": "countdown",
+      "width": 980,
+      "update": 3600,
+      "args": {
+        "event": "UNTIL SOMETHING",
+        "stop": 1379906000,
+        "timezone": "America/Chicago"
+      }
+    },
+    {
+      "name": "arrow",
+      "class": "mini middle",
+      "width": 300,
+      "height": 120,
+      "update": 15,
+      "args": {
+        "value": "10"
+      }
+    },
+    {
+     "name": "clock",
+      "class": "mini middle",
+      "width": 200,
+      "height": 120,
+      "update": 60,
+      "args": {
+        "timezone": "America/Chicago",
+        "format": "h:i a"
+      }
+    },
+    {
+      "name": "weather",
+      "class": "mini middle",
+      "width": 440,
+      "height": 120,
+      "update": 3600,
+      "args": {
+        "zipcode": "78216"
+      }
+    }
+  ]
+}
