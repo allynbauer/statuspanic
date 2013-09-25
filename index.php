@@ -30,9 +30,14 @@ function render($module) {
     }
     $argstr = "'" . implode("&", $argstr) . "'";
     $style = "width: {$module->width}px;";
+<<<<<<< HEAD
     $class = isset($module->class) ? $module->class : '';
     if (isset($module->height)) $style .= " height: {$module->height}px";
     echo "<div class='module $class' id='$module->name' style='$style'></div>\n";
+=======
+    if (isset($module->height)) $style .= " height: {$module->height}px";
+    echo "<div class='module $module->class' id='$module->name' style='$style'></div>\n";
+>>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
     echo "\t<script type='text/javascript'>activate_module('$module->name', $module->update, $argstr);</script>\n\n";
 }
 

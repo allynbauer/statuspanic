@@ -51,6 +51,7 @@ body {
 .star {
     display: block;
     border-style:solid;
+<<<<<<< HEAD
     border-color:transparent;
     width:50px;
     height:50px;
@@ -65,6 +66,22 @@ body {
     float:left;
     border-style: solid;
 	position: absolute;
+=======
+    border-color:transparent; 
+    width:50px;
+    height:50px;
+    position: relative;    
+	display: block;
+    float:left;  	
+    top: -0.5em;
+    left: 3em;                           
+}
+.star span {
+	display: block;
+    float:left;  	
+    border-style: solid;	
+	position: absolute;	
+>>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
 }
 .star .top{
     /*	top, right, bottom */
@@ -78,14 +95,24 @@ body {
 .star .center {
     border-color: #ded00b transparent transparent ;
     border-width: 31px 47px 0px 47px;
+<<<<<<< HEAD
 	left: 5px;
 	top: 27px;
+=======
+	left: 5px;  	
+	top: 27px; 
+>>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
 }
 .star .bottom {
     border-color: transparent transparent #0A0A0A;
     border-width: 0px 30px 22px;
+<<<<<<< HEAD
 	top: 58px;
 	left: 22px;
+=======
+	top: 58px; 
+	left: 22px;    	
+>>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
 }
 .star .text {
 	color: #000;
@@ -93,9 +120,15 @@ body {
 	font-weight: bold;
 	font-size: 32px;
 	z-index: 100;
+<<<<<<< HEAD
     border-style: none;
 	left: 46px;
 	top: 22px;
+=======
+    border-style: none;	
+	left: 46px;  	
+	top: 22px;     
+>>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
 }
 
 
@@ -154,7 +187,7 @@ table {
 td {
 	background-color: #1c2020;
 	text-align: left;
-	padding-left: 10px;
+	padding-left: 10px; 
 	margin: 10px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -201,7 +234,11 @@ a {
 /* @group ARROW MODULE */
 
 #arrow_icon {
+<<<<<<< HEAD
 	display: block;
+=======
+	display: block;	
+>>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
 }
 
 .uparrow {
@@ -212,13 +249,22 @@ a {
     width: 0px;
     margin-top: 18px;
     margin-left: 132px;     /* (300/2) - 18 */
+<<<<<<< HEAD
 }
+=======
+}      
+
+>>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
 
 
 .downarrow {
     border-color: #e31d18 transparent transparent transparent;
     border-style: solid;
+<<<<<<< HEAD
     border-width: 40px 18px 0px;
+=======
+    border-width: 40px 18px 0px; 
+>>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
     height: 0px;
     width: 0px;
     margin-top: 18px;
@@ -240,7 +286,11 @@ a {
 
 ul {
     list-style-type: none;
+<<<<<<< HEAD
 	padding: 8px 0;
+=======
+	padding: 8px;
+>>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
 	margin: 0;
 }
 
@@ -259,34 +309,32 @@ li .content {
   font-size: 28px;
 }
 
+.bubble  {
+    width: 40px;
+    height: 40px;
+    background: #333;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;	
+    position: relative;
+    float: left;
+}
 .bubble span {
-	display: block;
-  width: 40px;
-	height: 40px;
-	line-height: 40px;
-	padding: 0;
-	margin: 0;
-	float: left;
+    position: relative; 
+    top: 6px;
 }
 
-.bubble .background {
-  font-style: normal;
-	font-family: 'Cutouts';
-	font-size: 70px;
+.bubble.red  {
+    background: #d81817;
 }
 
-.bubble.red .background {
-  color: #d81817;
-}
-
-.bubble.orange .background {
-  color: #fc5005;
+.bubble.orange  {
+    background: #fc5005;
 }
 
 .bubble .display {
-  text-align: center;
-  margin-left: -30px;
-  font-size: 20px;
+    text-align: center;
+/*    margin-left: -30px; */
+    font-size: 20px;
 }
 
 /* @end */
