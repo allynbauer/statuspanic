@@ -4,18 +4,33 @@
   "rotate": "no",
   "modules": [
     {
+      "name": "label",
+      "width": 980,
+      "update": 0,
+      "class": "middle",
+      "args": {
+        "text": "Status Board"
+      }
+    },
+    {
       "name": "bargraph",
       "width": 980,
       "update": 15,
       "class": "middle",
       "args": {
-        "height": 300
+        "height": 300,
+        "datadir": "bargraphdata",
+        "items": "transmit,coda,unison,candybar,general,secrets"
       }
     },
     {
       "name": "grid",
       "width": 980,
-      "update": 300
+      "update": 300,
+      "args": {
+        "datadir": "griddata",
+        "items": "transmit,unison,coda,otherthing,exciting"
+      }
     },
     {
       "name": "countdown",
@@ -72,7 +87,11 @@
     {
       "name": "newsticker",
       "width": 980,
-      "update": 3600
+      "update": 3600,
+      "args": {
+        "datadir": "news",
+        "items": "createdby,githublink,date"
+      }
     },
     {
       "name": "stockticker",
