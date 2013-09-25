@@ -26,5 +26,16 @@ if ($days <= 0) {
 ?>
 
 <div class='mega'>
-    <span class='icon'>H</span><?php echo $result; ?>
+
+<?php 
+if ($days <= 0) {
+    echo '    <div class="star">
+        <span class="top"></span>
+        <span class="center"></span>        
+        <span class="bottom"></span>                
+        <span class="text">!</span>        
+    </div>';
+}
+?>
+    <?php echo $result; ?>
 </div>

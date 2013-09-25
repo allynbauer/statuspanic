@@ -19,7 +19,6 @@ $items = array(
         ?>
         <li>
             <span class='<?php echo $color ?> bubble'>
-                <span class='background'>E</span>
                 <span class='display'><?php echo $bubble ?></span>
             </span>
             <span class='content'><?php echo $line ?></span>
