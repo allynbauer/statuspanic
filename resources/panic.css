@@ -1,29 +1,16 @@
 /* @group FONT */
 /*
-@font-face {
-  font-family: 'Cutouts';
-  src: url('cutouts.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+=======
+/* FONT */
 
 @font-face {
-  font-family: 'Cutouts2';
-  src: url('cutouts2.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-/*
-@font-face {
-	font-family: 'FreakyFace';
-	src: url('TheFreakyFace.otf');
+	font-family: 'Cutouts';
+	src: url('cutouts.ttf') format('truetype');
 	font-weight: normal;
-  	font-style: normal;
+	font-style: normal;
 }
-*/
-/* @end */
 
-/* @group GENERAL */
+/* GENERAL */
 
 body {
 	font-family: verdana, arial, helvetica, sans-serif;
@@ -51,7 +38,6 @@ body {
 .star {
     display: block;
     border-style:solid;
-<<<<<<< HEAD
     border-color:transparent;
     width:50px;
     height:50px;
@@ -66,22 +52,6 @@ body {
     float:left;
     border-style: solid;
 	position: absolute;
-=======
-    border-color:transparent; 
-    width:50px;
-    height:50px;
-    position: relative;    
-	display: block;
-    float:left;  	
-    top: -0.5em;
-    left: 3em;                           
-}
-.star span {
-	display: block;
-    float:left;  	
-    border-style: solid;	
-	position: absolute;	
->>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
 }
 .star .top{
     /*	top, right, bottom */
@@ -95,24 +65,14 @@ body {
 .star .center {
     border-color: #ded00b transparent transparent ;
     border-width: 31px 47px 0px 47px;
-<<<<<<< HEAD
 	left: 5px;
 	top: 27px;
-=======
-	left: 5px;  	
-	top: 27px; 
->>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
 }
 .star .bottom {
     border-color: transparent transparent #0A0A0A;
     border-width: 0px 30px 22px;
-<<<<<<< HEAD
 	top: 58px;
 	left: 22px;
-=======
-	top: 58px; 
-	left: 22px;    	
->>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
 }
 .star .text {
 	color: #000;
@@ -120,15 +80,9 @@ body {
 	font-weight: bold;
 	font-size: 32px;
 	z-index: 100;
-<<<<<<< HEAD
     border-style: none;
 	left: 46px;
 	top: 22px;
-=======
-    border-style: none;	
-	left: 46px;  	
-	top: 22px;     
->>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
 }
 
 
@@ -139,22 +93,22 @@ body {
 }
 
 .mini {
-  background-color: #1c2020;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#454f4f), to(#111));
+	background-color: #1c2020;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#454f4f), to(#111));
 }
 
-
 .bluegradient {
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c5660), to(#091b31));
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c5660), to(#091b31));		
 }
 
 .jumbo {
 	font-size: 28px;
 }
+
 .vertical-center {
-    top: 50%;
+	top: 50%;
 	position: relative;
     margin-top: -0.5em;
     height: 1em;
@@ -163,9 +117,9 @@ body {
     margin-top: -1em;
     height: 2em;
 }
-.height-3 {
-    margin-top: -1.5em;
-    height: 3em;
+
+.padding {
+	padding: 1.5em;
 }
 
 .mega {
@@ -234,11 +188,7 @@ a {
 /* @group ARROW MODULE */
 
 #arrow_icon {
-<<<<<<< HEAD
 	display: block;
-=======
-	display: block;	
->>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
 }
 
 .uparrow {
@@ -249,22 +199,12 @@ a {
     width: 0px;
     margin-top: 18px;
     margin-left: 132px;     /* (300/2) - 18 */
-<<<<<<< HEAD
 }
-=======
-}      
-
->>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
-
 
 .downarrow {
     border-color: #e31d18 transparent transparent transparent;
     border-style: solid;
-<<<<<<< HEAD
     border-width: 40px 18px 0px;
-=======
-    border-width: 40px 18px 0px; 
->>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
     height: 0px;
     width: 0px;
     margin-top: 18px;
@@ -286,11 +226,7 @@ a {
 
 ul {
     list-style-type: none;
-<<<<<<< HEAD
 	padding: 8px 0;
-=======
-	padding: 8px;
->>>>>>> b77ce1335fa72ad672615efef62f4b0506386cb3
 	margin: 0;
 }
 
@@ -453,3 +389,8 @@ li .content {
 
 /* @end */
 
+.center {
+	color: #fff;
+	font-style: normal;
+	font-family: 'Cutouts';
+}

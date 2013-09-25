@@ -15,7 +15,7 @@ $data = array_values ($gridrows);
 
 ?>
 
-<div>
+<div class="grid">
     <table border='0' width='100%' cellpadding='0' cellspacing='10'>
     <?php
     $count = 0;
