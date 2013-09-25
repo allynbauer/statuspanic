@@ -21,9 +21,9 @@
       "width": 980,
       "update": 3600, 
       "args": {
-        "event": "UNTIL SOMETHING",
-        "stop": 1274706000,
-        "timezone": "America/Chicago"
+        "event": "until Next Ship (Aug 15)",
+        "stop": 1313438400,
+        "timezone": "America/Los_Angeles"
       }
     },
     {
@@ -43,7 +43,7 @@
       "height": 120,
       "update": 60, 
       "args": {
-        "timezone": "America/Chicago",
+        "timezone": "America/Los_Angeles",
         "format": "h:i a"
       }      
     },
@@ -54,7 +54,7 @@
       "height": 120,
       "update": 3600, 
       "args": {
-        "zipcode": "50613"
+        "zipcode": "94041"
       }
     },
     {
