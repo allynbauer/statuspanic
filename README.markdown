@@ -1,6 +1,6 @@
 What is StatusPanic?
 ====================
-StatusPanic is a simple PHP system for creating a way to make a [Panic](http://panic.com)-style [Status Board](http://www.panic.com/blog/2010/03/the-panic-status-board/) with as little effort as possible. Branched from the [original project](https://github.com/allynbauer/statuspanic), I've added twitter, rss, and github modules, as well as updated the css to slightly more modern practices.
+StatusPanic is a simple PHP system for creating a way to make a [Panic](http://panic.com)-style [Status Board](http://www.panic.com/blog/2010/03/the-panic-status-board/) with as little effort as possible. 
 
 Configuration
 ====================
@@ -14,11 +14,16 @@ The modules are loaded on the initial page load. From there, .load() is used to 
 
 Writing a Module
 ====================
-The board looks for modules based on their "type", which should be a folder in the /modules directory. It then loads /modules/%type%/?arg1=foo&arg2=bar for every module defined in the JSON, and, optionally, includes a css file it looks for at /modules/%type%/%type%.css. Although the index is written in PHP, you could theoretically write a module in any language.
+The board looks for modules based on their "type", which should be a folder in the /modules directory. It then loads /modules/%type%/?arg1=foo&arg2=bar for every module defined in the JSON, and, optionally, includes a css file it looks for at /modules/%type%/%type%.css. Although the index is written in PHP, you could theoretically write a module in any language. Modules can subsequently utilize data from any source which can be maniuplated programatically.
 
 Libraries that more than one module might need access to, such as the PHP Magpie RSS library, should be placed in /shared-libraries.
+
+Contributing
+====================
+To contribute, simply fork this project, commit your changes there, and create a pull request. 
 
 To-dos
 ====================
 + continue updating the css
 + more modules?
++ get the demo running, yet again
